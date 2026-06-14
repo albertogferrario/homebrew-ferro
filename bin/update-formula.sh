@@ -24,7 +24,7 @@ VER="${TAG#v}"
 
 # Skip if already at this version with real (non-placeholder) checksums.
 ZEROS="0000000000000000000000000000000000000000000000000000000000000000"
-if grep -q "version \"${VER}\"" "${FORMULA}" && ! grep -q "${ZEROS}" "${FORMULA}"; then
+if grep -q "/v${VER}/" "${FORMULA}" && ! grep -q "${ZEROS}" "${FORMULA}"; then
   echo "Formula already at ${VER} with real checksums — nothing to do."
   exit 0
 fi
