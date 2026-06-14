@@ -1,0 +1,25 @@
+name: Update formula
+
+# Token-free auto-bump: this workflow runs INSIDE the tap and commits to itself with the
+# built-in GITHUB_TOKEN. It polls ferro's public releases — no PAT / cross-repo secret needed.
+on:
+  schedule:
+    - cron: '0 */6 * * *'   # every 6 hours
+  workflow_dispatch: {}       # manual "Run workflow" for an instant bump after a release
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-formula
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bump formula to latest ferro release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash bin/update-formula.sh
