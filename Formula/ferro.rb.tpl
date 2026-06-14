@@ -3,7 +3,6 @@
 class Ferro < Formula
   desc "CLI for scaffolding Ferro web applications"
   homepage "https://github.com/albertogferrario/ferro"
-  version "VERSION_PLACEHOLDER"
   license "MIT"
 
   livecheck do
