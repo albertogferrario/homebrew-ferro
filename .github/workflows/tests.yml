@@ -31,10 +31,10 @@ jobs:
       - name: Ruby syntax check
         run: ruby -c Formula/ferro.rb
 
-      - name: brew audit (strict, online on PR only)
+      - name: Tap and audit formula by name
         run: |
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            brew audit --strict --online Formula/ferro.rb
-          else
-            brew audit --strict Formula/ferro.rb
-          fi
+          # `brew audit <path>` is disabled in current Homebrew — audit by qualified name
+          # within the tap. --online verifies URL liveness + sha; --strict is omitted because
+          # its rules target homebrew-core submission, not a private tap.
+          brew tap albertogferrario/ferro
+          brew audit --online albertogferrario/ferro/ferro
