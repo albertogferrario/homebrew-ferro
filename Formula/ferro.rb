@@ -12,23 +12,23 @@ class Ferro < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/albertogferrario/ferro/releases/download/v0.2.66/ferro-v0.2.66-aarch64-apple-darwin.tar.gz"
-      sha256 "d26ae8b5af17102ed31e26cd6df1154a0822074e4aa0422cd635a72e9932bfd3"
+      url "https://github.com/albertogferrario/ferro/releases/download/v0.2.68/ferro-v0.2.68-aarch64-apple-darwin.tar.gz"
+      sha256 "47408649ef8f490a3a61f341c1a75001ef839a69e5a58cd69d6a26d22d7f9ed1"
     end
     on_intel do
-      url "https://github.com/albertogferrario/ferro/releases/download/v0.2.66/ferro-v0.2.66-x86_64-apple-darwin.tar.gz"
-      sha256 "84988dfa7f6740316992a0a97da04cf76f245ba3e45bf1631d327d61b32c581e"
+      url "https://github.com/albertogferrario/ferro/releases/download/v0.2.68/ferro-v0.2.68-x86_64-apple-darwin.tar.gz"
+      sha256 "9e97be4d7292f17d43cf86a678bb222bffe1a920d1669a94d6636541213a26bb"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/albertogferrario/ferro/releases/download/v0.2.66/ferro-v0.2.66-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "47eb21f43ffb3184ef89324096b5012832b24d6548f186238d24daf781c0ea3b"
+      url "https://github.com/albertogferrario/ferro/releases/download/v0.2.68/ferro-v0.2.68-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "e517282e015bfcb0ef12d3c363c6e8fb8e8b060d34a6e30e3090f4d6d9bf3743"
     end
     on_intel do
-      url "https://github.com/albertogferrario/ferro/releases/download/v0.2.66/ferro-v0.2.66-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "759e25e045402fcc000293871f3e103732e3167c52959a81b2d14fbd68986432"
+      url "https://github.com/albertogferrario/ferro/releases/download/v0.2.68/ferro-v0.2.68-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "64e698891d2973137fc361aa298c028873b3049dab21cad2fde246f0a44003f4"
     end
   end
 
